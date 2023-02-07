@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="94.58">
+    <testcase classname="feature to test login functionality" name="User logs into the system" time="41.525">
+        <system-out><![CDATA[Given The user is on login page.............................................passed
+When The user enters valid details..........................................passed
+And The user clicks on captcha..............................................passed
+And The user clicks on login button.........................................passed
+Then The user is navigated to dashboard.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="feature to test signup functionality" name="Add new contacts" time="0.012">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given The user is on dashboard..............................................undefined
+And User clicks on the new contact button...................................skipped
+When User adds valid inputs.................................................skipped
+And User selects all the check boxes........................................skipped
+Then User clicks the save button............................................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="feature to test signup functionality" name="User creates an account" time="52.77">
+        <system-out><![CDATA[Given The user is on registration page......................................passed
+When The user inputs valid details..........................................passed
+And The user selects captcha................................................passed
+And User clicks on register button..........................................passed
+Then navigated to dashboard.................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
