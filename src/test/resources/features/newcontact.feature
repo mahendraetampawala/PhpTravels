@@ -1,6 +1,6 @@
 #Author: Mahendra
 @tag
-Feature: feature to test signup functionality
+Feature: feature to test adding new contact functionality
 
   Scenario: Add new contacts
     Given The user is on dashboard

@@ -76,6 +76,7 @@ public class signup extends UserData{
 		//driver.findElement(By.id("inputNewPassword1")).sendKeys(password);
 		signupElements.passwordField(driver).sendKeys(password);
 		//driver.findElement(By.id("inputNewPassword2")).sendKeys(password);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		signupElements.confirmPWD(driver).sendKeys(password);
 		
 		

@@ -37,7 +37,7 @@ public class newcontactElements {
 	static By cancelBtn=By.xpath("//*[@id=\"main-body\"]/div/div[1]/div[2]/div[4]/input[2]");
 	static By deleteBTN=By.xpath("//*[@id=\"main-body\"]/div/div[1]/div[2]/div[4]/input[2]");
 	static By newContactDropdown=By.id("inputContactId");
-	
+
 	public static WebElement newContactBTn(WebDriver driver) {
 		element=driver.findElement(newcontactBTN);
 		return element;

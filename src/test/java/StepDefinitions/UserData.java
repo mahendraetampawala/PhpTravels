@@ -22,6 +22,7 @@ public class UserData {
 	public String state="Central Province";
 	public String country="Sri Lanka";
 	public String postalcode="20450";
+	public String newcontactmail="mahendra@gmail.com";
 	
 	
 }
