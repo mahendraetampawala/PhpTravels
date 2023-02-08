@@ -43,12 +43,16 @@ public class NewContact extends UserData {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		
 	}
-	@When("User adds valid inputs")
+	@When("user clicks on choose contact dropdown field and selects the new contact")
+	public void user_clicks_on_choose_contact_dropdown_field_and_selects_the_new_contact() {
+		
+	}
+	@And("User adds valid inputs")
 	public void User_adds_valid_inputs() {
 		
 	}
-	@And("User selects all the check boxes")
-	public void User_selects_all_the_check_boxes() {
+	@And("User selects checkboxes as needed")
+	public void User_selects_checkboxes_as_needed() {
 		
 	}
 	@Then("User clicks the save button")
