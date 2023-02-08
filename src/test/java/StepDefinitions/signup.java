@@ -3,12 +3,18 @@
  */
 package StepDefinitions;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import Elements.signupElements;
 import io.cucumber.java.en.And;
@@ -43,7 +49,7 @@ public class signup extends UserData{
 		
 	}
 	@When("The user inputs valid details")
-	public void The_user_inputs_valid_details() {
+	public void The_user_inputs_valid_details() throws InterruptedException {
 		
 		//driver.findElement(By.id("inputFirstName")).sendKeys(firstname);
 		signupElements.firstName(driver).sendKeys(firstname);
@@ -74,10 +80,24 @@ public class signup extends UserData{
 		//driver.findElement(By.xpath("/html/body/form[2]/div/div/div/div[1]/button")).click();
 		
 		//driver.findElement(By.id("inputNewPassword1")).sendKeys(password);
-		signupElements.passwordField(driver).sendKeys(password);
+		//signupElements.passwordField(driver).sendKeys(password);
 		//driver.findElement(By.id("inputNewPassword2")).sendKeys(password);
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		signupElements.confirmPWD(driver).sendKeys(password);
+		//signupElements.confirmPWD(driver).sendKeys(password);
+		signupElements.generatePWDBTN(driver).sendKeys(Keys.RETURN);
+		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+		signupElements.copytoClipboard(driver).sendKeys(Keys.RETURN);
+		
+		/*WebElement clickclosebtn=signupElements.closeGenerator(driver);
+		JavascriptExecutor clickCBTN1=(JavascriptExecutor)driver;
+		clickCBTN1.executeScript("arguments[0].click();", clickclosebtn);
+		*/
+		//driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//wait.until(ExpectedConditions.invisibilityOfElementLocated((By) signupElements.closeGenerator(driver)));
+				
+		Thread.sleep(1000);
+		signupElements.closeGenerator(driver).sendKeys(Keys.RETURN);
 		
 		
 	}

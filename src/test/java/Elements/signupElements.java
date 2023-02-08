@@ -28,6 +28,9 @@ public class signupElements {
 	static By passwordField=By.id("inputNewPassword1");
 	static By confirmPwd=By.id("inputNewPassword2");
 	static By registerBTN=By.xpath("//*[@id=\"frmCheckout\"]/p/input");
+	static By generatePWDBTN=By.xpath("//*[@id=\"containerPassword\"]/div[4]/div/button");
+	static By copytoClipboard=By.xpath("//*[@id=\"btnGeneratePasswordInsert\"]");
+	static By closeGenerator=By.xpath("//*[@id=\"modalGeneratePassword\"]/div/div/div[3]/button[1]");
 	
 	public static WebElement newaccount(WebDriver driver) {
 		element=driver.findElement(newAccountLink);
@@ -84,6 +87,18 @@ public class signupElements {
 	}
 	public static WebElement registrationbtn(WebDriver driver) {
 		element=driver.findElement(registerBTN);
+		return element;
+	}
+	public static WebElement generatePWDBTN(WebDriver driver) {
+		element=driver.findElement(generatePWDBTN);
+		return element;
+	}
+	public static WebElement copytoClipboard(WebDriver driver) {
+		element=driver.findElement(copytoClipboard);
+		return element;
+	}
+	public static WebElement closeGenerator(WebDriver driver) {
+		element=driver.findElement(closeGenerator);
 		return element;
 	}
 }
