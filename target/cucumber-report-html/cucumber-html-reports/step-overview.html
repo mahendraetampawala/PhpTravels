@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Assignment</td>
+                          <td>1</td>
+                        <td>12 Feb 2023, 12:56</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.Login.The_user_clicks_on_captcha()</td>
+                <td>1</td>
+                <td class="duration" data-value="10010570600">10s 010ms</td>
+                <td class="duration" data-value="10010570600">10s 010ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Login.The_user_clicks_on_login_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="4153465900">4s 153ms</td>
+                <td class="duration" data-value="4153465900">4s 153ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Login.The_user_enters_valid_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="290928400">290ms</td>
+                <td class="duration" data-value="290928400">290ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Login.The_user_is_navigated_to_dashboard()</td>
+                <td>1</td>
+                <td class="duration" data-value="2822932100">2s 822ms</td>
+                <td class="duration" data-value="2822932100">2s 822ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Login.The_user_is_on_login_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="5392671900">5s 392ms</td>
+                <td class="duration" data-value="5392671900">5s 392ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.NewContact.The_user_clicks_on_the_save_changes_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="3852016300">3s 852ms</td>
+                <td class="duration" data-value="3852016300">3s 852ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.NewContact.The_user_is_on_dashboard()</td>
+                <td>1</td>
+                <td class="duration" data-value="26432493800">26s 432ms</td>
+                <td class="duration" data-value="26432493800">26s 432ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.NewContact.User_adds_valid_inputs()</td>
+                <td>1</td>
+                <td class="duration" data-value="671093900">671ms</td>
+                <td class="duration" data-value="671093900">671ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.NewContact.User_clicks_on_the_new_contact_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="2089612300">2s 089ms</td>
+                <td class="duration" data-value="2089612300">2s 089ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.NewContact.User_selects_checkboxes_as_needed()</td>
+                <td>1</td>
+                <td class="duration" data-value="288429900">288ms</td>
+                <td class="duration" data-value="288429900">288ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.NewContact.user_clicks_on_choose_contact_dropdown_field_and_selects_the_new_contact()</td>
+                <td>1</td>
+                <td class="duration" data-value="1031446300">1s 031ms</td>
+                <td class="duration" data-value="1031446300">1s 031ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.signup.The_user_inputs_valid_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="2154201300">2s 154ms</td>
+                <td class="duration" data-value="2154201300">2s 154ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.signup.The_user_is_on_registration_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="4737848500">4s 737ms</td>
+                <td class="duration" data-value="4737848500">4s 737ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.signup.The_user_selects_captcha()</td>
+                <td>1</td>
+                <td class="duration" data-value="20006317100">20s 006ms</td>
+                <td class="duration" data-value="20006317100">20s 006ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.signup.User_clicks_on_register_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="1295628900">1s 295ms</td>
+                <td class="duration" data-value="1295628900">1s 295ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.signup.navigated_to_dashboard()</td>
+                <td>1</td>
+                <td class="duration" data-value="2773963600">2s 773ms</td>
+                <td class="duration" data-value="2773963600">2s 773ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>16</td>
+              <td>16</td>
+              <td class="duration">1m 28s 003ms</td>
+              <td class="duration">5s 500ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

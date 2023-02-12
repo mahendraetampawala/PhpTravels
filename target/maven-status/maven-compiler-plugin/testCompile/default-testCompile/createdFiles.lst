@@ -1,0 +1,8 @@
+Elements\LoginElements.class
+Elements\newcontactElements.class
+StepDefinitions\signup.class
+StepDefinitions\Login.class
+StepDefinitions\Runner.class
+Elements\signupElements.class
+StepDefinitions\UserData.class
+StepDefinitions\NewContact.class

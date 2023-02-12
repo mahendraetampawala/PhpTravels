@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="94.58">
-    <testcase classname="feature to test login functionality" name="User logs into the system" time="41.525">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="88.221">
+    <testcase classname="feature to test login functionality" name="User logs into the system" time="22.697">
         <system-out><![CDATA[Given The user is on login page.............................................passed
 When The user enters valid details..........................................passed
 And The user clicks on captcha..............................................passed
@@ -8,15 +8,16 @@ And The user clicks on login button.........................................pass
 Then The user is navigated to dashboard.....................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="feature to test signup functionality" name="Add new contacts" time="0.012">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given The user is on dashboard..............................................undefined
-And User clicks on the new contact button...................................skipped
-When User adds valid inputs.................................................skipped
-And User selects all the check boxes........................................skipped
-Then User clicks the save button............................................skipped
-]]></failure>
+    <testcase classname="feature to test adding new contact functionality" name="Add new contacts" time="34.373">
+        <system-out><![CDATA[Given The user is on dashboard..............................................passed
+And User clicks on the new contact button...................................passed
+When user clicks on choose contact dropdown field and selects the new contact.passed
+And User adds valid inputs..................................................passed
+And User selects checkboxes as needed.......................................passed
+Then The user clicks on the save changes button.............................passed
+]]></system-out>
     </testcase>
-    <testcase classname="feature to test signup functionality" name="User creates an account" time="52.77">
+    <testcase classname="feature to test signup functionality" name="User creates an account" time="30.972">
         <system-out><![CDATA[Given The user is on registration page......................................passed
 When The user inputs valid details..........................................passed
 And The user selects captcha................................................passed
