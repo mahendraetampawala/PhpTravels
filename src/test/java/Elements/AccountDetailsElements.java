@@ -53,8 +53,82 @@ public class AccountDetailsElements {
 		element=driver.findElement(address1Field);
 		return element;
 	}
-	
-	
+	public static WebElement lastName(WebDriver driver) {
+		element=driver.findElement(lastNameField);
+		return element;
+	}
+	public static WebElement Address2Field(WebDriver driver) {
+		element=driver.findElement(Address2Field);
+		return element;
+	}
+	public static WebElement companyName(WebDriver driver) {
+		element=driver.findElement(companyField);
+		return element;
+	}
+	public static WebElement cityField(WebDriver driver) {
+		element =driver.findElement(cityField);
+		return element;
+	}
+	public static WebElement Email(WebDriver driver) {
+		element=driver.findElement(EmailField);
+		return element;
+	}
+	public static WebElement State(WebDriver driver) {
+		element=driver.findElement(stateField);
+		return element;
+	}
+	public static WebElement payment(WebDriver driver) {
+		element=driver.findElement(paymentField);
+		return element;
+	}
+	public static WebElement ZipCode(WebDriver driver) {
+		element=driver.findElement(zipcodeField);
+		return element;
+	}
+	public static WebElement BillingAdd(WebDriver driver) {
+		element =driver.findElement(BillinField);
+		return element;
+	}
+	public static WebElement country(WebDriver driver) {
+		element=driver.findElement(countryField);
+		return element;
+	}
+	public static WebElement mobileNUmber2(WebDriver driver) {
+		element=driver.findElement(mobileField2);
+		return element;
+	}
+	public static WebElement phoneNumber(WebDriver driver) {
+		element=driver.findElement(phoneNumberField);
+		return element;
+	}
+	public static WebElement GenerateEmailCheckBox(WebDriver driver) {
+		element=driver.findElement(GenerateEmailCheckBox);
+		return element;
+	}
+	public static WebElement InvoiceCheckBox(WebDriver driver) {
+		element=driver.findElement(InvoiceCheckBox);
+		return element;
+	}
+	public static WebElement supportCheckBox(WebDriver driver) {
+		element=driver.findElement(supportCheckBox);
+		return element;
+	}
+	public static WebElement productEmailsField(WebDriver driver) {
+		element=driver.findElement(productEmailsField);
+		return element;
+	}
+	public static WebElement domainEmailsField(WebDriver driver) {
+		element=driver.findElement(domainEmailsField);
+		return element;
+	}
+	public static WebElement affiliateEmailsField(WebDriver driver) {
+		element=driver.findElement(affiliateEmailsField);
+		return element;
+	}
+	public static WebElement SaveButton(WebDriver driver) {
+		element=driver.findElement(SaveButton);
+		return element;
+	}
 	
 	
 }

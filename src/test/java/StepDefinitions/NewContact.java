@@ -142,7 +142,7 @@ public class NewContact extends UserData {
 		driver.close();
 		driver.quit();
 	}
-	@Given("The user is on client area")
+	/*@Given("The user is on client area")
 	public void The_user_is_on_client_area() throws InterruptedException {
 	
 		driver.navigate().to(clientDashBoard);
@@ -160,6 +160,6 @@ public class NewContact extends UserData {
 	public void User_clicks_on_save_changes_button() {
 		
 	}
-	
+	*/
 	
 }
