@@ -117,12 +117,24 @@ public class AccountDetails extends UserData {
 		checkbox2.click();
 		WebElement checkbox3=AccountDetailsElements.supportCheckBox(driver);
 		checkbox3.click();
+		WebElement checkbox4=AccountDetailsElements.productEmailsField(driver);
+		checkbox4.click();
+		WebElement checkbox5=AccountDetailsElements.domainEmailsField(driver);
+		checkbox5.click();
+		WebElement checkbox6=AccountDetailsElements.affiliateEmailsField(driver);
+		checkbox6.click();
+		
+		
 		
 		
 	}
 	@Then("User clicks on save changes button")
-	public void User_clicks_on_save_changes_button() {
-		
+	public void User_clicks_on_save_changes_button() throws InterruptedException {
+		AccountDetailsElements.SaveButton(driver).sendKeys(Keys.RETURN);
+		driver.getPageSource().contains("Changes Saved Successfully");
+		Thread.sleep(2000);
+		driver.close();
+		driver.quit();
 	}
 	
 	
