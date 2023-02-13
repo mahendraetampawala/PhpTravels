@@ -89,10 +89,7 @@ public class AccountDetailsElements {
 		element =driver.findElement(BillinField);
 		return element;
 	}
-	public static WebElement country(WebDriver driver) {
-		element=driver.findElement(countryField);
-		return element;
-	}
+	
 	public static WebElement mobileNUmber2(WebDriver driver) {
 		element=driver.findElement(mobileField2);
 		return element;

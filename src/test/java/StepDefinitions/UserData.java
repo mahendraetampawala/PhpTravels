@@ -27,6 +27,26 @@ public class UserData {
 	public String postalcode="20450";
 	public String newcontactmail="mahendra@gmail.com";
 	public String clientDashBoard="https://phptravels.org/clientarea.php";
+	
+	
+	
+	public String Updatedemail="mahendraetampawalaupdate198@gmail.com";
+	public String Updatednewmail="mahendraetampawalaupdate98@gmail.com";
+	public String Updatedpassword="Mahendra1125";
+	public String Updatedfirstname="Mahendra";
+	public String Updatedlastname="Etampawala";
+	public String Updatedphone="0769917579";
+	public String Updatedcompany="Konnect";
+	public String Updatedaddress="23/A Colombo 10";
+	public String Updatedcity="Kandy";
+	public String Updatedstate="Central Province";
+	public String Updatedcountry="Sri Lanka";
+	public String Updatedpostalcode="20450";
+	public String Updatednewcontactmail="mahendraetampawala98@gmail.com";
+	public String paymentMethod="Wire Bank Transfer";
+	
+	
+	
 	public void userData() {
 		String projectpath=System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",projectpath+"/src/test/resources/Drivers/chromedriver.exe");
