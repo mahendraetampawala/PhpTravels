@@ -1,9 +1,9 @@
 #Author: Mahendra
 
-
+#@mustRun
 Feature: feature to test login functionality
 
-  
+  @SmokeTesting
   Scenario: User logs into the system
     Given The user is on login page
     When The user enters valid details

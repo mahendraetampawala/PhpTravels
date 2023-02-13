@@ -1,9 +1,8 @@
 #Author: Mahendra
-
-@tag
+#@mustRun
 Feature: feature to test signup functionality
 
-  @tag3
+	@SmokeTesting
   Scenario: User creates an account
     Given The user is on registration page
     When The user inputs valid details

@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -13,6 +14,8 @@ import org.openqa.selenium.WebElement;
  */
 public class signupElements {
 	private static WebElement element=null;
+	
+
 	
 	static By newAccountLink=By.xpath("//*[@id=\"main-body\"]/div/div[1]/div/form/div/div[2]/a");
 	static By firstNamefield=By.id("inputFirstName");
@@ -31,6 +34,8 @@ public class signupElements {
 	static By generatePWDBTN=By.xpath("//*[@id=\"containerPassword\"]/div[4]/div/button");
 	static By copytoClipboard=By.xpath("//*[@id=\"btnGeneratePasswordInsert\"]");
 	static By closeGenerator=By.xpath("//*[@id=\"modalGeneratePassword\"]/div/div/div[3]/button[1]");
+	
+	
 	
 	public static WebElement newaccount(WebDriver driver) {
 		element=driver.findElement(newAccountLink);

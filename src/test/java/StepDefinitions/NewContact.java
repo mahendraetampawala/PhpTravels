@@ -23,6 +23,8 @@ import com.google.common.base.Function;
 
 import Elements.LoginElements;
 import Elements.newcontactElements;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -36,13 +38,26 @@ public class NewContact extends UserData {
 
 	WebDriver driver=null;
 	
-	@Given("The user is on dashboard")
-	public void The_user_is_on_dashboard() throws InterruptedException {
-		
+	/*public NewContact(WebDriver driver) {
+		this.driver=driver;
+	}*/
+	@Before
+	public void browsersetup() {
 		String projectpath=System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",projectpath+"/src/test/resources/Drivers/chromedriver.exe");
 		
 		driver=new ChromeDriver();
+	}
+	@After
+	public void teardown() {
+		
+		driver.close();
+		driver.quit();
+	}
+	
+	@Given("The user is on dashboard")
+	public void The_user_is_on_dashboard() throws InterruptedException {
+		
 		driver.navigate().to(link);
 		
 		
@@ -139,27 +154,8 @@ public class NewContact extends UserData {
 		newcontactElements.savebutton(driver).sendKeys(Keys.RETURN);
 		driver.getPageSource().contains("Contact created successfully!");
 		Thread.sleep(2000);
-		driver.close();
-		driver.quit();
+		
 	}
-	/*@Given("The user is on client area")
-	public void The_user_is_on_client_area() throws InterruptedException {
 	
-		driver.navigate().to(clientDashBoard);
-		
-	}
-	@And("Clicks on account details button")
-	public void Clicks_on_account_details_button() {
-		
-	}
-	@When("User clicks on relevent fields and change details")
-	public void User_clicks_on_relevent_fields_and_change_details() {
-		
-	}
-	@Then("User clicks on save changes button")
-	public void User_clicks_on_save_changes_button() {
-		
-	}
-	*/
 	
 }

@@ -6,6 +6,7 @@ package StepDefinitions;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -17,6 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import Elements.signupElements;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -30,13 +33,26 @@ public class signup extends UserData{
 
 	WebDriver driver=null;
 	
-	@Given("The user is on registration page")
-	public void The_user_is_on_registration_page() {
+	/*public signup(WebDriver driver) {
+		this.driver=driver;
+	}*/
+	@Before
+	public void browsersetup() {
 		String projectpath=System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",projectpath+"/src/test/resources/Drivers/chromedriver.exe");
 		
-		
 		driver=new ChromeDriver();
+	}
+	@After
+	public void teardown() {
+		
+		driver.close();
+		driver.quit();
+	}
+	
+	@Given("The user is on registration page")
+	public void The_user_is_on_registration_page() {
+		
 		
 		driver.navigate().to(link);
 		
@@ -116,10 +132,12 @@ public class signup extends UserData{
 	}
 	@Then("navigated to dashboard")
 	public void navigated_to_dashboard() throws InterruptedException {
-		driver.getPageSource().contains("Client Area");
+		//driver.getPageSource().contains("Client Area");
+		
+		String URL = driver.getCurrentUrl();
+		Assert.assertEquals(URL, DashURL );
 		Thread.sleep(2000);
-		driver.close();
-		driver.quit();
+		
 	}
 	
 }

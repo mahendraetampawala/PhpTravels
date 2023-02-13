@@ -27,7 +27,7 @@ public class UserData {
 	public String postalcode="20450";
 	public String newcontactmail="mahendra@gmail.com";
 	public String clientDashBoard="https://phptravels.org/clientarea.php";
-	
+	public String DashURL="https://phptravels.org/clientarea.php";
 	
 	
 	public String Updatedemail="mahendraetampawalaupdate198@gmail.com";

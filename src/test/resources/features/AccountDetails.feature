@@ -1,6 +1,7 @@
 #Author: Mahendra
-@tag
+@mustRun
 Feature: feature to test update account details functionality
+	@SmokeTesting
   Scenario: Update account details
     Given The user is on client area
     And Clicks on account details button

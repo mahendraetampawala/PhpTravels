@@ -1,7 +1,7 @@
 #Author: Mahendra
-@tag
+#@mustRun
 Feature: feature to test adding new contact functionality
-
+	@SmokeTesting
   Scenario: Add new contacts
     Given The user is on dashboard
     And User clicks on the new contact button

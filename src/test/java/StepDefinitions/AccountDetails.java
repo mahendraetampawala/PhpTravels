@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import Elements.AccountDetailsElements;
 import Elements.LoginElements;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -28,16 +30,26 @@ public class AccountDetails extends UserData {
 	//UserData data=new UserData();
 	//Login login=new Login();
 	
-	/*public AccountDetails(WebDriver driver) {
+/*	public AccountDetails(WebDriver driver) {
 		this.driver=driver;
 	}*/
-	@Given("The user is on client area")
-	public void The_user_is_on_client_area() throws InterruptedException {
-	
+	@Before
+	public void browsersetup() {
 		String projectpath=System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver",projectpath+"/src/test/resources/Drivers/chromedriver.exe");
 		
 		driver=new ChromeDriver();
+	}
+	@After
+	public void teardown() {
+		
+		driver.close();
+		driver.quit();
+	}
+	@Given("The user is on client area")
+	public void The_user_is_on_client_area() throws InterruptedException {
+	
+		
 		driver.navigate().to(link);
 		
 		//data.userData();
@@ -133,8 +145,6 @@ public class AccountDetails extends UserData {
 		AccountDetailsElements.SaveButton(driver).sendKeys(Keys.RETURN);
 		driver.getPageSource().contains("Changes Saved Successfully");
 		Thread.sleep(2000);
-		driver.close();
-		driver.quit();
 	}
 	
 	
